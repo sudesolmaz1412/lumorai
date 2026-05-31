@@ -1,0 +1,53 @@
+/* purgecss start ignore */
+@layer base {
+  @tailwind base;
+}
+@layer components {
+  @tailwind components;
+}
+@layer utilities {
+  @tailwind utilities;
+}
+/* purgecss end ignore */
+
+:root {
+  --background: #F8FAFC; 
+  --foreground: #1E293B; 
+  --gold: #C99A3D;
+  --blue: #2563EB;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Tasarımı */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C99A3D;
+}

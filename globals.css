@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* User Summary'deki premium renk paleti tanımları */
+  --foreground-rgb: 30, 41, 59; /* Deep Navy */
+  --background-start-rgb: 248, 250, 252; /* Soft White */
+  --background-end-rgb: 255, 255, 255;
+  
+  /* Özel Renk Değişkenleri */
+  --lumora-navy: #1E293B;
+  --lumora-gold: #C99A3D;
+  --lumora-blue: #2563EB;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-900 bg-[#F8FAFC];
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+@layer components {
+  /* Premium Buton Yapısı */
+  .btn-premium {
+    @apply px-8 py-3 rounded-xl font-bold transition-all duration-300 active:scale-95 shadow-lg;
+    background-color: var(--lumora-gold);
+    color: var(--lumora-navy);
+  }
+
+  .btn-premium:hover {
+    @apply shadow-xl opacity-90;
+    transform: translateY(-2px);
+  }
+
+  /* Kart Yapısı (image_1fe0f2.png esintili) */
+  .lumora-card {
+    @apply bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm transition-all duration-500;
+  }
+
+  .lumora-card:hover {
+    @apply shadow-2xl -translate-y-2 border-[#C99A3D]/20;
+  }
+}
+
+/* Animasyonlar */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Scrollbar Özelleştirme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C99A3D;
+}
